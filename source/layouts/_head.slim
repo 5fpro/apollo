@@ -1,0 +1,25 @@
+head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# 5fpro: http://ogp.me/ns/fb/5fpro#"
+
+title= current_page.data.title || '5FPRO'
+meta name="description" content="Web/Mobile App design and development studio."
+link rel="canonical" href="https://5fpro.com/"
+
+meta property="og:site_name" content="5FPRO"
+meta property="og:title" content="#{current_page.data.title || '5FPRO'}"
+meta property="og:description" content="Web/Mobile App design and development studio."
+meta property="og:type" content="website"
+meta property="og:url" content="https://5fpro.com/"
+meta property="og:image" content=image_path("logo.png")
+link rel="shortcut icon" href=image_path("icon.png")
+link rel="apple-touch-icon" href=image_path("icon.png")
+link rel="apple-touch-icon-precomposed" href=image_path("icon.png")
+link rel="apple-touch-icon-120x120-precomposed" href=image_path("icon.png")
+link rel="icon" size="32x32" href=image_path("icon.png")
+
+meta content="IE=edge" http-equiv="X-UA-Compatible"
+meta charset="utf-8"
+meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+
+
+= stylesheet_link_tag :all
+= javascript_include_tag :all
