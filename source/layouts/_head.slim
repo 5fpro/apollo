@@ -2,14 +2,15 @@ head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# 5fpro: http://ogp.me
 
 title= current_page.data.title || '5FPRO'
 meta name="description" content="Web/Mobile App design and development studio."
-link rel="canonical" href="https://5fpro.com/"
+link rel="canonical" href="#{root_url}"
 
 meta property="og:site_name" content="5FPRO"
 meta property="og:title" content="#{current_page.data.title || '5FPRO'}"
 meta property="og:description" content="Web/Mobile App design and development studio."
 meta property="og:type" content="website"
-meta property="og:url" content="https://5fpro.com/"
-meta property="og:image" content=image_path("logo.png")
+meta property="og:url" content="#{root_url}"
+meta property="fb:app_id" content="794616544014295"
+meta property="og:image" content=image_url("logo.png")
 link rel="shortcut icon" href=image_path("icon.png")
 link rel="apple-touch-icon" href=image_path("icon.png")
 link rel="apple-touch-icon-precomposed" href=image_path("icon.png")

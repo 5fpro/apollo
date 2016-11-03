@@ -23,11 +23,17 @@ page '/*.txt', layout: false
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+set :protocol, 'https://'
+set :host, '5fpro.com'
+helpers do
+  def image_url(source)
+    config[:protocol] + config[:host] + image_path(source)
+  end
+
+  def root_url
+    config[:protocol] + config[:host] + '/'
+  end
+end
 
 # Build-specific configuration
 configure :build do
