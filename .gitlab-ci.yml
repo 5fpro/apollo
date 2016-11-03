@@ -9,9 +9,9 @@ pages:
   - apt-get update -yqqq
   - apt-get install -y nodejs
   - bundle install --path vendor
-  - bundle exec middleman build
+  - bundle exec middleman build --build-dir=public
   artifacts:
     paths:
-    - build
+    - public
   only:
   - master
