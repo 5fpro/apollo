@@ -4,15 +4,6 @@ cache:
   paths:
   - vendor
 
-test:
-  script:
-  - apt-get update -yqqq
-  - apt-get install -y nodejs
-  - bundle install --path vendor
-  - bundle exec middleman build
-  except:
-    - master
-
 pages:
   script:
   - apt-get update -yqqq
