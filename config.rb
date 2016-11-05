@@ -25,6 +25,8 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 set :protocol, 'https://'
 set :host, '5fpro.com'
+set :ga_id, 'UA-86881903-2'
+
 helpers do
   def image_url(source)
     config[:protocol] + config[:host] + image_path(source)
@@ -32,6 +34,10 @@ helpers do
 
   def root_url
     config[:protocol] + config[:host] + '/'
+  end
+
+  def ga_id
+    config[:ga_id]
   end
 end
 
