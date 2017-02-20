@@ -1,0 +1,1 @@
+aws s3 sync ./build s3://5fpro-com --exclude "CNAME" --exclude "*.git/*" --acl public-read --profile 5fpro
