@@ -1,6 +1,6 @@
 cd build
 git add .
-git commit -m "$(date +"%Y/%m/%d") $(date +"%T") build"
+git commit -m "$(git rev-parse --abbrev-ref HEAD) @ $(date +"%Y/%m/%d") $(date +"%T")"
 git push origin gh-pages
 cd ..
 sleep 5
