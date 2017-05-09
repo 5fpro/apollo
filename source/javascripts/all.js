@@ -1,1 +1,2 @@
-//= require 'force_https.js'
+//= require jquery/dist/jquery.min
+//= require force_https
