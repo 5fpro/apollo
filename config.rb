@@ -51,9 +51,6 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
-
-  activate :sprockets
-  sprockets.append_path File.join "#{root}", "bower_components"
 end
 
 activate :sprockets
