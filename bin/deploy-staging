@@ -1,0 +1,7 @@
+cd build
+git add .
+git commit -m "$(date +"%Y/%m/%d") $(date +"%T") build"
+git push origin gh-pages
+cd ..
+sleep 5
+open http://staging.5fpro.com
