@@ -12,11 +12,15 @@ bower install
 Start / Stop
 =====
 
+start:
+
 ```
 middleman
 ```
 
-Ctrl + C to stop.
+stop:
+
+`Ctrl + C` to stop.
 
 Build
 ======
