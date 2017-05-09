@@ -26,6 +26,9 @@ page '/*.txt', layout: false
 set :protocol, 'https://'
 set :host, '5fpro.com'
 set :ga_id, 'UA-86881903-2'
+set :css_dir, 'stylesheets'
+set :js_dir,  'javascripts'
+
 
 helpers do
   def image_url(source)
@@ -44,8 +47,16 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  activate :sprockets
+  sprockets.append_path File.join "#{root}", "bower_components"
 end
+
+activate :sprockets
+sprockets.append_path File.join "#{root}", "bower_components"
+
+# activate :bower
