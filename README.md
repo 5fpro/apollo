@@ -1,4 +1,11 @@
-BUILD
+Requirement
+====
+
+```
+rvm install `cat .ruby-version`
+```
+
+Build project
 ====
 
 ```
@@ -22,7 +29,7 @@ stop:
 
 `Ctrl + C` to stop.
 
-Build
+Build dist files
 ======
 
 ```
