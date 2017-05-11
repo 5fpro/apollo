@@ -55,3 +55,5 @@ end
 
 activate :sprockets
 sprockets.append_path File.join "#{root}", "bower_components"
+
+activate :livereload, port: '4567'
