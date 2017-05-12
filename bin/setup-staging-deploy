@@ -1,0 +1,2 @@
+rm -rf build
+git clone -b gh-pages git@github.com:5fpro/apollo.git build
