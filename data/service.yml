@@ -1,0 +1,13 @@
+services:
+  - title: '網站系統建置'
+    desc: '為 STUDIO DOE 的前身所獨立出來的純內容官網，提供多元化內容上稿，以及 SEO。'
+    icon: 'service-icon_1.svg'
+  - title: '網頁及搜尋引擎最佳化'
+    desc: '為 STUDIO DOE 的前身所獨立出來的純內容官網，提供多元化內容上稿，以及 SEO。'
+    icon: 'service-icon_2.svg'
+  - title: '爬蟲與資料分析'
+    desc: '為 STUDIO DOE 的前身所獨立出來的純內容官網，提供多元化內容上稿，以及 SEO。'
+    icon: 'service-icon_3.svg'
+  - title: '電子商務系統'
+    desc: '為 STUDIO DOE 的前身所獨立出來的純內容官網，提供多元化內容上稿，以及 SEO。'
+    icon: 'service-icon_4.svg'
