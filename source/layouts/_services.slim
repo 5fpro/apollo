@@ -1,11 +1,10 @@
 section#services
   .container
-    .row
-      .col-xs-12
-        .section-title Services
+    .section-title Services
 
+    .row.display-flex
       - data.service.services.each do |item|
-        .col-xs-12.col-sm-6.col-md-3
+        .col-xs-12.col-sm-6
           .service
             .service-icon
               = image_tag item.icon, alt: item.title, title: item.title
