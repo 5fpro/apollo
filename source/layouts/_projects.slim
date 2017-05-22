@@ -1,11 +1,10 @@
 section#projects
   .container
-    .row
-      .col-xs-12
-        .section-title Projects
+    h3.section-title Projects
 
-      .col-xs-12
-        - data.project.projects.first(3).each do |item|
+    .row
+      - data.project.projects.first(3).each do |item|
+        .col-xs-12
           .project
             .project-visual
               = link_to item.link, target: '_blank' do
@@ -17,7 +16,8 @@ section#projects
               p =item.time
             .project-info
               p.project-desc =item.desc
-        - data.project.projects[3..-1].each do |item|
+      - data.project.projects[3..-1].each do |item|
+        .col-xs-12
           .project.prohidden
             .project-visual
               = link_to item.link, target: '_blank' do
@@ -30,6 +30,6 @@ section#projects
             .project-info
               p.project-desc =item.desc
 
-      .col-xs-12
-        a.project-more href="#"
-          | VIEW MORE
+    .project-more
+      a href="#"
+        | VIEW MORE

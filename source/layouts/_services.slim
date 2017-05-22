@@ -1,6 +1,6 @@
 section#services
   .container
-    .section-title Services
+    h3.section-title Services
 
     .row.display-flex
       - data.service.services.each do |item|
@@ -8,5 +8,5 @@ section#services
           .service
             .service-icon
               = image_tag item.icon, alt: item.title, title: item.title
-            .service-title =item.title
-            .service-desc =item.desc
+            h4.service-title =item.title
+            p.service-desc =item.desc
