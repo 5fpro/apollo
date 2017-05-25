@@ -1,113 +1,165 @@
 #projects
   background: $marble
 
-  .project
-    position: relative
-    max-width: 960px
-    margin: 0 auto 80px
+  .projects-list
+    @extend .flexbox
 
-    .project-visual
-      +transition(all, 0.3s)
-      opacity: 0.8
+    .project
+      position: relative
+      max-width: 960px
+      margin: 0 auto 40px
 
-      &:hover
-        opacity: 1
+      @media (min-width: $screen-sm)
+        margin: 0 auto 80px
 
-    .project-photo
-      +size(680px, 280px)
-      overflow: hidden
-      display: inline-block
-      cursor: pointer
+      .project-visual
+        +transition(all, 0.3s)
+        opacity: 0.8
 
-      img
-        +size(100%, auto)
+        &:hover
+          opacity: 1
 
-      &.carousel-fade
-        .carousel-inner
-          .item
-            opacity: 0
-            transition-property: opacity
+      .project-photo
+        +size(100%, 280px)
+        overflow: hidden
+        display: inline-block
+        cursor: pointer
+        margin-top: 120px
 
-          .active
-            opacity: 1
-            &.left, &.right
-              left: 0
+        @media (min-width: $screen-sm)
+          +size(70%, 280px)
+          margin: 0
+
+        @media (min-width: $screen-md)
+          +size(680px, 280px)
+
+        img
+          +size(100%, auto)
+
+        &.carousel-fade
+          .carousel-inner
+            .item
               opacity: 0
-              z-index: 1
+              transition-property: opacity
 
-    .project-logo
-      +size(280px, 160px)
-      display: inline-block
-      position: relative
-      vertical-align: top
-      padding-left: 40px
+            .active
+              opacity: 1
+              &.left, &.right
+                left: 0
+                opacity: 0
+                z-index: 1
 
-      img
-        -webkit-transform: translateY(-50%)
+      .project-logo
+        +size(100%, 100px)
         position: absolute
-        top: 50%
+        top: 0
+        padding-left: 30px
+        overflow: hidden
 
-    .project-time
-      +size(36%, auto)
-      position: relative
+        @media (min-width: $screen-sm)
+          +size(30%, 160px)
+          display: inline-block
+          position: relative
+          vertical-align: top
 
-      p
-        width: 20%
-        color: $purple
-        font-size: 16px
-        text-transform: uppercase
-        line-height: 2.4
-        margin: 0
+        @media (min-width: $screen-md)
+          +size(280px, 160px)
 
-      &:before
-        content: ""
-        +size(75%, 1px)
-        background: $purple
+        img
+          -webkit-transform: translateY(-50%)
+          position: absolute
+          top: 50%
+
+      .project-time
+        +size(80%, auto)
+        position: relative
+        z-index: 9999
+        margin: 0 0 5px 20%
+
+        p
+          width: 30%
+          color: #fff
+          font-size: 16px
+          text-transform: uppercase
+          line-height: 2.4
+          margin: 0
+          padding: 0 10px
+
+        &:before
+          content: ""
+          +size(65%, 1px)
+          background: #fff
+          position: absolute
+          bottom: 50%
+          right: 0
+
+        @media (min-width: $screen-sm)
+          +size(36%, auto)
+          margin: 0
+
+          p
+            color: $purple
+          &:before
+            background: $purple
+        
+        @media (min-width: $screen-md)
+          p
+            width: 20%
+            padding: 0
+          &:before
+            +size(75%, 1px)
+
+      .project-info
+        +size(85%, auto)
+        background-image: linear-gradient(to bottom, $viloet, $purple)
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+        display: table
         position: absolute
-        bottom: 50%
+        bottom: 0
         right: 0
+        padding: 30px
 
-    .project-info
-      +size(62.5%, 160px)
-      background-image: linear-gradient(to bottom, $viloet, $purple)
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
-      display: table
-      position: absolute
-      top: 160px
-      right: 0
-      padding: 40px
+        p.project-desc
+          color: #fff
+          font-size: 15px
+          line-height: 1.6
+          letter-spacing: 1.2px
+          display: table-cell
+          vertical-align: middle
+          -webkit-transform: translate3d(0, 0, 0)
+          padding-bottom: 20px
 
-      p.project-desc
-        color: #fff
-        font-size: 15px
-        line-height: 1.6
-        letter-spacing: 1.2px
-        display: table-cell
-        vertical-align: middle
-        -webkit-transform: translate3d(0, 0, 0)
+        @media (min-width: $screen-sm)
+          +size(62.5%, 160px)
+          padding: 40px
+          top: 160px
 
-  .project-more
-    width: 100%
+          p.project-desc
+            padding: 0
 
-  .project-more
-    padding-top: 80px
+    .prehidden
+      width: 100%
 
-    a
-      @extend .button-more
-      border: solid 1px $purple
+    .project-more
+      width: 100%
+      padding-top: 80px
 
-      &:before
-        content: ""
-        +size(1px, 80px)
-        background: $purple
-        position: absolute
-        -webkit-transform: translateX(-50%) translateY(-100%)
-        left: 50%
+      a
+        @extend .button-more
+        border: solid 1px $purple
 
-      &:hover
-        color: white
-        background: $purple
-        text-decoration: none
+        &:before
+          content: ""
+          +size(1px, 80px)
+          background: $purple
+          position: absolute
+          -webkit-transform: translateX(-50%) translateY(-100%)
+          left: 50%
+
+        &:hover
+          color: white
+          background: $purple
+          text-decoration: none
 
   /* For Carousel Fading Effects */
   @media all and (transform-3d), (-webkit-transform-3d)

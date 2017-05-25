@@ -11,7 +11,7 @@ $(function(){
   
   $('#project-more').click(function(e){
     e.preventDefault();
-    hidden_project.slideToggle(1500, 'linear');
+    hidden_project.fadeToggle();
 
     if (this.innerHTML == "VIEW MORE"){
       this.innerHTML = "VIEW LESS";
