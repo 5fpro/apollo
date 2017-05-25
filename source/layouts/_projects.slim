@@ -1,35 +1,40 @@
 section#projects
-  .container
-    h3.section-title Projects
+  h3.section-title Projects
 
-    .row
-      - data.project.projects.first(3).each do |item|
-        .col-xs-12
-          .project
-            .project-visual
-              = link_to item.link, target: '_blank' do
-                .project-photo
-                  = image_tag 'project/' + item.photo, alt: item.client, title: item.client
-                .project-logo
-                  = image_tag 'project/' + item.logo, alt: item.client, title: item.client
-            .project-time
-              p =item.time
-            .project-info
-              p.project-desc =item.desc
-      - data.project.projects[3..-1].each do |item|
-        .col-xs-12
-          .project.prohidden
-            .project-visual
-              = link_to item.link, target: '_blank' do
-                .project-photo
-                  = image_tag 'project/' + item.photo, alt: item.client, title: item.client
-                .project-logo
-                  = image_tag 'project/' + item.logo, alt: item.client, title: item.client
-            .project-time
-              p =item.time
-            .project-info
-              p.project-desc =item.desc
+  .projects-list
+    - data.project.projects.take(3).each do |item|
+      .project
+        .project-visual
+          = link_to item.link, target: '_blank' do
+            .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
+              .carousel-inner role="listbox"
+                - item.photo.each_with_index do |photo, index|
+                  .item class="#{index == 0 ? "active" : ""}"
+                    = image_tag 'project/' + photo, alt: item.client, title: item.client
+            .project-logo
+              = image_tag 'project/' + item.logo, alt: item.client, title: item.client
+        .project-time
+          p =item.time
+        .project-info
+          p.project-desc =item.desc
+
+    .prehidden
+      - data.project.projects.drop(3).each do |item|
+        .project
+          .project-visual
+            = link_to item.link, target: '_blank' do
+              .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
+                .carousel-inner role="listbox"
+                  - item.photo.each_with_index do |photo, index|
+                    .item class="#{index == 0 ? "active" : ""}"
+                      = image_tag 'project/' + photo, alt: item.client, title: item.client
+              .project-logo
+                = image_tag 'project/' + item.logo, alt: item.client, title: item.client
+          .project-time
+            p =item.time
+          .project-info
+            p.project-desc =item.desc
 
     .project-more
-      a href="#"
+      a#project-more href="#"
         | VIEW MORE
