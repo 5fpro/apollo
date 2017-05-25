@@ -2,38 +2,38 @@ section#projects
   h3.section-title Projects
 
   .projects-list
-    - data.project.projects.take(3).each do |item|
+    - data.project.projects.take(3).each do |project|
       .project
         .project-visual
-          = link_to item.link, target: '_blank' do
+          = link_to project.link, target: '_blank' do
             .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
               .carousel-inner role="listbox"
-                - item.photo.each_with_index do |photo, index|
-                  .item class="#{index == 0 ? "active" : ""}"
-                    = image_tag 'project/' + photo, alt: item.client, title: item.client
+                - project.photo.each_with_index do |photo, index|
+                  .project class="#{index == 0 ? "active" : ""}"
+                    = image_tag 'project/' + photo, alt: project.client, title: project.client
             .project-logo
-              = image_tag 'project/' + item.logo, alt: item.client, title: item.client
+              = image_tag 'project/' + project.logo, alt: project.client, title: project.client
         .project-time
-          p =item.time
+          p =project.time
         .project-info
-          p.project-desc =item.desc
+          p.project-desc =project.desc
 
     .prehidden
-      - data.project.projects.drop(3).each do |item|
+      - data.project.projects.drop(3).each do |project|
         .project
           .project-visual
-            = link_to item.link, target: '_blank' do
+            = link_to project.link, target: '_blank' do
               .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
                 .carousel-inner role="listbox"
-                  - item.photo.each_with_index do |photo, index|
-                    .item class="#{index == 0 ? "active" : ""}"
-                      = image_tag 'project/' + photo, alt: item.client, title: item.client
+                  - project.photo.each_with_index do |photo, index|
+                    .project class="#{index == 0 ? "active" : ""}"
+                      = image_tag 'project/' + photo, alt: project.client, title: project.client
               .project-logo
-                = image_tag 'project/' + item.logo, alt: item.client, title: item.client
+                = image_tag 'project/' + project.logo, alt: project.client, title: project.client
           .project-time
-            p =item.time
+            p =project.time
           .project-info
-            p.project-desc =item.desc
+            p.project-desc =project.desc
 
     .project-more
       a#project-more href="#"

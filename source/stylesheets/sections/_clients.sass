@@ -1,0 +1,21 @@
+#clients
+
+  .clients-list
+    width: 1200px
+    margin: 0 auto
+
+    .client
+      +size(20%, 100px)
+      display: inline-block
+
+      &.even
+        background-color: $marble
+
+      .client-logo
+        position: relative
+
+        img
+          position: absolute
+          top: 50%
+          left: 50%
+          -webkit-transform: translateX(-50%) translateY(100%)
