@@ -2,17 +2,11 @@
 title: 5FPRO 伍樓專業
 ---
 
-/ .welcome
-/   .logo
-/     = link_to 'mailto:hi@5fpro.com', target: '_blank' do
-/       = image_tag "logo.png", alt: 'contact us', title: 'contact us'
-
-/ = partial 'base/nav'
-
 .main
-  = partial 'layouts/cover'
-  = partial 'layouts/services'
-  = partial 'layouts/projects'
-  = partial 'layouts/clients'
-  = partial 'layouts/team'
-  = partial 'layouts/contact'
+  .container-fluid
+    = partial 'layouts/cover'
+    = partial 'layouts/services'
+    = partial 'layouts/projects'
+    = partial 'layouts/clients'
+    = partial 'layouts/team'
+    = partial 'layouts/contact'

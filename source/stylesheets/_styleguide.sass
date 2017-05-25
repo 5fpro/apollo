@@ -11,15 +11,19 @@ a:hover, a:visited, a:link, a:active
 
 section
   padding: 100px 0
+  margin: 0 -15px
 
-/* Fix Equal Height*/
-.row.display-flex
+/* Flexbox for Equal Height*/
+.flexbox
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
   display: flex
-  flex-wrap: wrap
 
-  > [class*='col-']
-    display: flex
-    flex-direction: column
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
+
 
 /* Text styles */
 .section-title
@@ -30,9 +34,10 @@ section
   text-align: center
   color: $blue-grey
 
+  width: 100%
   position: relative
   padding-bottom: 40px
-  margin-bottom: 100px
+  margin: 0 0 100px
 
   &:after
     content: ""
