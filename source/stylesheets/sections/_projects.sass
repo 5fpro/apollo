@@ -66,9 +66,9 @@
           +size(280px, 160px)
 
         img
-          -webkit-transform: translateY(-50%)
           position: absolute
           top: 50%
+          +transform(translateY(-50%))
 
       .project-time
         +size(80%, auto)
@@ -126,8 +126,8 @@
           letter-spacing: 1.2px
           display: table-cell
           vertical-align: middle
-          -webkit-transform: translate3d(0, 0, 0)
           padding-bottom: 20px
+          +transform(translate3d(0, 0, 0))
 
         @media (min-width: $screen-sm)
           +size(62.5%, 160px)
@@ -153,8 +153,8 @@
           +size(1px, 80px)
           background: $purple
           position: absolute
-          -webkit-transform: translateX(-50%) translateY(-100%)
           left: 50%
+          +transform(translateX(-50%) translateY(-100%))
 
         &:hover
           color: white
@@ -166,9 +166,7 @@
     .carousel-fade .carousel-inner > .item
       &.next, &.active.right, &.prev, &.active.left
         opacity: 0
-        -webkit-transform: translate3d(0, 0, 0)
-        transform: translate3d(0, 0, 0)
+        +transform(translate3d(0, 0, 0))
       &.next.left, &.prev.right, &.active
         opacity: 1
-        -webkit-transform: translate3d(0, 0, 0)
-        transform: translate3d(0, 0, 0)
+        +transform(translate3d(0, 0, 0))

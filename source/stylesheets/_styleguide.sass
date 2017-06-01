@@ -6,6 +6,9 @@ $blue-grey: #455A64
 $silver: #cfd8dc
 $marble: #edf2f6
 
+body
+  font-family: 'Questrial', sans-serif
+
 a:hover, a:visited, a:link, a:active
   text-decoration: none
 
@@ -27,7 +30,6 @@ section
 
 /* Text styles */
 .section-title
-  font-family: 'Questrial', sans-serif
   font-size: 20px
   text-transform: uppercase
   letter-spacing: 2px
@@ -44,9 +46,10 @@ section
     +size(17px, 20px)
     background: url(../images/5fpro-icon.svg) no-repeat left top
     position: absolute
-    -webkit-transform: translateX(-50%) translateY(100%)
     bottom: 0
     left: 50%
+
+    +transform(translateX(-50%) translateY(100%))
 
   @media (min-width: $screen-sm)
     font-size: 24px
