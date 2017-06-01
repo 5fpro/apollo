@@ -1,21 +1,43 @@
 #clients
+  @media (min-width: $screen-md)
+    padding: 100px 60px
 
   .clients-list
-    width: 1200px
+    @extend .flexbox
     margin: 0 auto
+    justify-content: flex-start
+
+    @media (min-width: $screen-sm)
+      max-width: 720px
+
+    @media (min-width: $screen-md)
+      max-width: 1200px
 
     .client
-      +size(20%, 100px)
-      display: inline-block
+      +size(80%, auto)
+      margin: 0 auto
+
+      @media (min-width: $screen-sm)
+        width: calc(100%/3)
+        margin: 0
+
+      @media (min-width: $screen-md)
+        width: 20%
 
       &.even
         background-color: $marble
 
-      .client-logo
-        position: relative
+      a
+        display: block
+        width: 240px
+        margin: 0 auto
+        filter: grayscale(1.0)
+        opacity: 0.8
+        +transition(all, 0.3s)
 
-        img
-          position: absolute
-          top: 50%
-          left: 50%
-          -webkit-transform: translateX(-50%) translateY(100%)
+        &:hover
+          filter: grayscale(0)
+          opacity: 1
+
+        @media (min-width: $screen-sm)
+          width: 100%
