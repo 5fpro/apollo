@@ -1,12 +1,10 @@
 section#services
-  .container
-    h3.section-title Services
+  h3.section-title Services
 
-    .row.display-flex
-      - data.service.services.each do |item|
-        .col-xs-12.col-sm-6.col-md-3
-          .service
-            .service-icon
-              = image_tag item.icon, alt: item.title, title: item.title
-            h4.service-title =item.title
-            p.service-desc =item.desc
+  .services-list
+    - data.service.services.each do |service|
+      .service
+        .service-icon
+          = image_tag service.icon, alt: service.title, title: service.title
+          h4.service-title =service.title
+        p.service-desc =service.desc
