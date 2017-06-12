@@ -1,8 +1,21 @@
 Requirement
 ====
 
+- install ruby.
+
 ```
 rvm install `cat .ruby-version`
+```
+
+- install bower
+
+```
+brew install nvm
+echo "export NVM_DIR=~/.nvm" >> ~/.zshrc
+echo ". $(brew --prefix nvm)/nvm.sh" >> ~/.zshrc
+source ~/.zshrc
+nvm install `cat .nvmrc`
+npm install -g bower
 ```
 
 Build project
@@ -22,7 +35,7 @@ Start / Stop
 start:
 
 ```
-middleman
+bundle exec middleman
 ```
 
 stop:
@@ -33,7 +46,7 @@ Build dist files
 ======
 
 ```
-middleman build
+bundle exec middleman build
 ```
 
 Deploy to staging
