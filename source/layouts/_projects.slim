@@ -9,7 +9,7 @@ section#projects
             .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
               .carousel-inner role="listbox"
                 - project.photo.each_with_index do |photo, index|
-                  .project class="#{index == 0 ? "active" : ""}"
+                  .item class="#{index == 0 ? "active" : ""}"
                     = image_tag 'project/' + photo, alt: project.client, title: project.client
             .project-logo
               = image_tag 'project/' + project.logo, alt: project.client, title: project.client
@@ -26,7 +26,7 @@ section#projects
               .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
                 .carousel-inner role="listbox"
                   - project.photo.each_with_index do |photo, index|
-                    .project class="#{index == 0 ? "active" : ""}"
+                    .item class="#{index == 0 ? "active" : ""}"
                       = image_tag 'project/' + photo, alt: project.client, title: project.client
               .project-logo
                 = image_tag 'project/' + project.logo, alt: project.client, title: project.client

@@ -1,0 +1,19 @@
+section#team
+  h3.section-title Team
+
+  .team-list
+    - data.team.members.each do |member|
+      .member
+        .member-card
+          .member-avatar
+            = image_tag 'team/' + member.avatar, alt: member.name, title: member.name, class: "avatar"
+            = image_tag 'team/mask.png', class: "mask"
+          .member-info
+            p.member-name = member.name
+            p.member-title = member.title
+            p.member-nickname = member.nickname
+            - if member.github
+              = link_to member.github, target: '_blank', class: "member-github" do
+                i.fa.fa-github aria-hidden="true"
+            .member-motto
+              p = member.motto

@@ -1,0 +1,122 @@
+#team
+  background: $marble
+  padding: 100px 10%
+  position: relative
+  padding-bottom: 220px
+
+  @media (min-width: $screen-sm)
+
+    &:before
+      content: ""
+      +size(1px, 100%)
+      background-color: #fff
+      position: absolute
+      top: 0
+      left: 30%
+
+    &:after
+      content: ""
+      +size(1px, 100%)
+      background-color: #fff
+      position: absolute
+      top: 0
+      right: 30%
+
+  @media (min-width: $screen-md)
+
+    &:before
+      left: 36.5%
+
+    &:after
+      right: 36.5%
+
+  .team-list
+    @extend .flexbox
+    justify-content: center
+
+    .member
+      width: 100%
+      z-index: 999
+
+      margin-bottom: 80px
+
+      &:nth-child(5)
+        margin-bottom: 0
+
+      @media (min-width: $screen-sm)
+        width: 50%
+
+        &:nth-child(4)
+          margin-bottom: 0
+
+      @media (min-width: $screen-md)
+        width: calc(100%/3)
+
+      .member-card
+        +size(240px, 403px)
+        margin: 0 auto
+        text-align: center
+        background: #fff
+        box-shadow: 0 2px 4px 0 rgba($blue-grey, 0.5)
+
+        .member-avatar
+          position: relative
+
+          .mask
+            position: absolute
+            left: 0
+            top: 0
+            mix-blend-mode: multiply
+        
+          img
+            width: 100%
+
+        .member-info
+          +transform(translateY(-65px))
+
+          .member-name
+            font-size: 28px
+            color: #FFF
+            text-shadow: 0 2px 4px rgba($dark-grey, 0.5)
+
+          .member-title
+            font-size: 15px
+            color: #fff
+            letter-spacing: 2px
+            text-transform: uppercase
+            width: 210px
+            background: $viloet
+            border-radius: 100px
+            padding: 5px
+            margin: 0 auto
+
+          .member-nickname
+            font-size: 16px
+            color: $dark-grey
+            padding: 15px 0
+            margin: 0
+
+          .member-github
+            position: absolute
+            font-size: 24px
+            color: $dark-grey
+            top: 90px
+            right: 20px
+            +transition(color, 0.3s)
+
+            &:hover
+              color: $viloet
+
+          .member-motto
+            background: url(../images/team/motto.svg) no-repeat
+            +size(210px, 80px)
+            margin: 0 auto
+            display: table
+
+            p
+              display: table-cell
+              font-size: 14px
+              line-height: 1.5
+              color: $blue-grey
+              vertical-align: middle
+              padding: 12px 15px 0
