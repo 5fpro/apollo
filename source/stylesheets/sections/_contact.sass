@@ -79,10 +79,14 @@
         color: $purple
 
   .copyright
-    font-size: 16px
+    font-size: 14px
     color: #fff
     text-align: center
     +transform(translateX(-50%))
+    width: 100%
     position: absolute
     left: 48%
     bottom: 20px
+
+    @media (min-width: $screen-sm)
+      font-size: 16px
