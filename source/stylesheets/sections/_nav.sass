@@ -1,0 +1,79 @@
+.navbar-custom
+  background-color: transparent
+  border-width: 0
+  margin: 0
+  transition: all 0.3s ease
+  padding: 20px 10px
+
+  @media (min-width: $screen-sm)
+    padding: 45px
+
+  // Navbar Change on Scroll
+  @media (min-width: $screen-md)
+    &.affix
+      background-color: #fff
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+      padding: 10px 45px
+
+  .navbar-brand
+    +size(151px, 40px)
+    background: url(../images/logo_sprite.png) no-repeat
+    background-size: cover
+    background-position: left top
+    padding: 0
+    margin: 10px
+    
+    @media (min-width: $screen-sm)
+      background-position: left bottom
+      margin: 8px 0 0 -15px
+    
+  &.affix .navbar-brand
+    background-position: left top
+    padding: 0
+    margin: 8px 0 0 -15px
+  
+  .navbar-collapse
+    border-color: transparent
+    border-width: 0
+
+  .navbar-toggle
+    color: $purple
+    font-size: 20px
+    border-width: 0
+    padding: 0
+    margin: 12px 20px 0
+
+    &:hover, &:visited, &:link, &:active
+      background-color: transparent
+  
+  .nav
+    li a
+      position: relative
+      color: $dark-grey
+      font-size: 16px
+
+      &:hover 
+        
+        &:after
+          content: ""
+          +size(20px, 2px)
+          background: $purple
+          position: absolute
+          bottom: 0
+          left: 50%
+          +transform(translateX(-50%))
+
+  .navbar-nav>.active>a
+    background-color: transparent
+
+    &:after
+      content: ""
+      +size(20px, 2px)
+      background: $purple
+      position: absolute
+      bottom: 0
+      left: 50%
+      +transform(translateX(-50%))
+
+    &:hover, &:visited, &:link, &:active
+      background-color: transparent

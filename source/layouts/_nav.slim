@@ -1,0 +1,24 @@
+nav#mainNav.navbar.navbar-default.navbar-custom.navbar-fixed-top
+  .container-fluid
+    .navbar-header.page-scroll
+      button.navbar-toggle data-target="#navbar-collapse" data-toggle="collapse" type="button" 
+        i.fa.fa-bars
+      a.navbar-brand.page-scroll href="#home"
+
+    #navbar-collapse.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li.hidden
+          a href="#home" 
+        li
+          a.page-scroll href="#services"  SERVICES
+        li
+          a.page-scroll href="#projects"  PROJECTS
+        li
+          a.page-scroll href="#clients"  CLIENTS
+        li
+          a.page-scroll href="#team"  TEAM
+        li
+          a.page-scroll href="#contact"  CONTACT
+        li
+          = link_to "https://www.facebook.com/5fpro/", target: '_blank' do
+            i.fa.fa-facebook-official aria-hidden="true"
