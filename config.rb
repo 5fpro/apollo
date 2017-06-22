@@ -29,7 +29,6 @@ set :ga_id, 'UA-86881903-2'
 set :css_dir, 'stylesheets'
 set :js_dir,  'javascripts'
 
-
 helpers do
   def image_url(source)
     config[:protocol] + config[:host] + image_path(source)
