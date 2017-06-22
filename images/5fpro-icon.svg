@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="20px" viewBox="0 0 17 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>5fpro-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#814590" offset="0%"></stop>
+            <stop stop-color="#3A2B84" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="_Service" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Service_F" transform="translate(-712.000000, -165.000000)" fill="url(#linearGradient-1)">
+            <g id="Section" transform="translate(656.000000, 100.000000)">
+                <path d="M60.0746319,65 L71.8205185,65 C71.8958932,65 71.9335806,65.1004996 71.8707683,65.1507493 L56.1300239,75.9544526 C56.0672117,76.0047024 55.9792746,75.9293277 56.0043995,75.8665155 L59.9238825,65.1004996 C59.9490074,65.0376873 60.0118196,65 60.0746319,65 L60.0746319,65 Z M56.1802737,77.1101976 L62.8886197,77.1101976 C62.9388695,77.1101976 62.9765568,77.1604474 62.9639944,77.2106972 L61.0293777,84.8989139 C61.0042528,84.9742886 61.1047524,85.0371008 61.1675646,84.9742886 L72.9511386,73.203277 C73.0013884,73.1530272 72.9637011,73.0650901 72.8883264,73.0650901 L61.8710616,73.0650901 C61.8208118,73.0650901 61.770562,73.0776526 61.7328747,73.1027774 L56.1300239,76.9468858 C56.0672117,77.009698 56.104899,77.1101976 56.1802737,77.1101976 L56.1802737,77.1101976 Z" id="5fpro-icon
+        "></path>
+            </g>
+        </g>
+    </g>
+</svg>
