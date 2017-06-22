@@ -35,6 +35,13 @@ helpers do
     config[:protocol] + config[:host] + image_path(source)
   end
 
+  def inline_svg name
+    root = Middleman::Application.root
+    file_path = "#{root}/source/images/#{name}.svg"
+    return File.read(file_path) if File.exists? (file_path)
+    "(not found)"
+  end
+
   def root_url
     config[:protocol] + config[:host] + '/'
   end
