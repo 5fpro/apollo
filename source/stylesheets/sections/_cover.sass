@@ -12,7 +12,6 @@
     +size(100%, 100vh)
     position: fixed
     top: 0
-    z-index: -1
     padding: 30% 10%
     
     @media (min-width: $screen-md)
@@ -20,7 +19,7 @@
       background: -webkit-linear-gradient(left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
       background: linear-gradient(to left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80814590', endColorstr='#cc3a2b84',GradientType=0 )
-      padding: 15% 10%
+      padding: 25vh 10%
 
     .hero-title
       font-family: 'Noto Sans TC', sans-serif
@@ -71,27 +70,19 @@
         font-size: 16px
 
       @media (min-width: $screen-md)
-        width: 28%
+        width: 330px
         margin: 40px 0
 
-  .explore
-    position: fixed
-    z-index: 0
-    bottom: 40px
-    left: 50%
-    +transform(translateX(-50%))
+  #explore
+    @extend .button-more
+    color: #fff
+    background: $viloet
+    margin-top: 80px
+
+    &:hover
+      color: white
+      background: $purple
+      text-decoration: none
 
     @media (min-width: $screen-md)
-      top: 650px
-      left: 10%
-      +transform(translateX(0%))
-
-    a
-      @extend .button-more
-      color: #fff
-      background: $viloet
-
-      &:hover
-        color: white
-        background: $purple
-        text-decoration: none
+      margin: 0

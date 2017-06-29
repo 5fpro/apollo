@@ -1,9 +1,8 @@
 .navbar-custom
   background-color: #fff
   border-width: 0
-  height: 70px
-  padding: 20px 30px 0
   margin: 0
+  padding: 20px
   transition: background-color 0.2s, padding 0.5s ease
 
   @media (min-width: $screen-sm)
@@ -15,43 +14,37 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1)
 
     @media (min-width: $screen-sm)
-      padding: 10px 40px 5px
+      padding: 10px 40px
 
     @media (min-width: $screen-md)
-      .navbar-brand
+      .navbar-header .navbar-brand
         .logotype
           fill: #333
         .logo
           fill: url(#5fpro_gradient)
 
-  .navbar-brand
-    width: 120px
-    padding: 0
-    margin: 0 !important
+  .navbar-header
+    position: relative
 
-    @media (min-width: $screen-sm)
-      width: 150px
-      margin-top: 8px !important
+    .navbar-brand
+      position: absolute
+      width: 120px
+      padding: 0
+      left: 50%
+      +transform(translateX(-60%))
 
-    @media (min-width: $screen-md)
-      .logotype, .logo
-        fill: #fff
+      @media (min-width: $screen-sm)
+        width: 135px
+        top: 8px
+        +transform(translateX(0%))
+
+      @media (min-width: $screen-md)
+        width: 150px
+        .logotype, .logo
+          fill: #fff
   
   .navbar-collapse
-    border-color: transparent
     border-width: 0
-    border-top: 1px rgba(0,0,0,0.1) solid
-    background-color: #fff
-    padding: 0 30px
-    margin: 0 -45px
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1)
-
-    @media (min-width: $screen-sm)
-      background-color: transparent
-      border-top: 0
-      padding: 0
-      margin: 0
-      box-shadow: 0 2px 5px rgba(0,0,0,0)
 
   .navbar-toggle
     color: $purple
@@ -64,21 +57,26 @@
       background-color: transparent
   
   .nav
+    margin: 30px 0 0
+
+    @media (min-width: $screen-sm)
+      margin: 0
+
     li a
       position: relative
       color: $dark-grey
       font-size: 16px
+      text-align: center
 
-      @media (min-width: $screen-sm)
-        &:hover 
-          &:after
-            content: ""
-            +size(20px, 2px)
-            background: $purple
-            position: absolute
-            bottom: 0
-            left: 50%
-            +transform(translateX(-50%))
+      &:hover 
+        &:after
+          content: ""
+          +size(20px, 2px)
+          background: $purple
+          position: absolute
+          bottom: 0
+          left: 50%
+          +transform(translateX(-50%))
 
   .navbar-nav>.active>a
     background-color: transparent
@@ -87,12 +85,11 @@
     &:hover, &:visited, &:link, &:active
       background-color: transparent
 
-    @media (min-width: $screen-sm)
-      &:after
-        content: ""
-        +size(20px, 2px)
-        background: $purple
-        position: absolute
-        bottom: 5px
-        left: 50%
-        +transform(translateX(-50%))
+    &:after
+      content: ""
+      +size(20px, 2px)
+      background: $purple
+      position: absolute
+      bottom: 3px
+      left: 50%
+      +transform(translateX(-50%))
