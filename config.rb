@@ -29,10 +29,16 @@ set :ga_id, 'UA-86881903-2'
 set :css_dir, 'stylesheets'
 set :js_dir,  'javascripts'
 
-
 helpers do
   def image_url(source)
     config[:protocol] + config[:host] + image_path(source)
+  end
+
+  def inline_svg name
+    root = Middleman::Application.root
+    file_path = "#{root}/source/images/#{name}.svg"
+    return File.read(file_path) if File.exists? (file_path)
+    "(not found)"
   end
 
   def root_url

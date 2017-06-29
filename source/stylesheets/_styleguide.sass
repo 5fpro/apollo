@@ -7,14 +7,21 @@ $silver: #cfd8dc
 $marble: #edf2f6
 
 body
-  font-family: 'Questrial', sans-serif
+  font-family: 'Questrial', 'Noto Sans TC', sans-serif
 
 a:hover, a:visited, a:link, a:active
   text-decoration: none
 
 section
-  padding: 100px 0
+  position: relative
+  padding: 80px 0
   margin: 0 -15px
+
+  @media (min-width: $screen-md)
+    padding: 100px 0
+
+.main
+  overflow: hidden
 
 /* Flexbox for Equal Height*/
 .flexbox

@@ -1,0 +1,95 @@
+.navbar-custom
+  background-color: #fff
+  border-width: 0
+  margin: 0
+  padding: 20px
+  transition: background-color 0.2s, padding 0.5s ease
+
+  @media (min-width: $screen-sm)
+    background-color: transparent
+    padding: 40px
+
+  &.affix
+    background-color: #fff
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+
+    @media (min-width: $screen-sm)
+      padding: 10px 40px
+
+    @media (min-width: $screen-md)
+      .navbar-header .navbar-brand
+        .logotype
+          fill: #333
+        .logo
+          fill: url(#5fpro_gradient)
+
+  .navbar-header
+    position: relative
+
+    .navbar-brand
+      position: absolute
+      width: 120px
+      padding: 0
+      left: 50%
+      +transform(translateX(-60%))
+
+      @media (min-width: $screen-sm)
+        width: 135px
+        top: 8px
+        +transform(translateX(0%))
+
+      @media (min-width: $screen-md)
+        width: 150px
+        .logotype, .logo
+          fill: #fff
+  
+  .navbar-collapse
+    border-width: 0
+
+  .navbar-toggle
+    color: $purple
+    font-size: 20px
+    border-width: 0
+    padding: 0
+    margin: 0
+
+    &:hover, &:visited, &:link, &:active
+      background-color: transparent
+  
+  .nav
+    margin: 30px 0 0
+
+    @media (min-width: $screen-sm)
+      margin: 0
+
+    li a
+      position: relative
+      color: $dark-grey
+      font-size: 16px
+      text-align: center
+
+      &:hover 
+        &:after
+          content: ""
+          +size(20px, 2px)
+          background: $purple
+          position: absolute
+          bottom: 0
+          left: 50%
+          +transform(translateX(-50%))
+
+  .navbar-nav>.active>a
+    background-color: transparent
+    color: $purple
+
+    &:hover, &:visited, &:link, &:active
+      background-color: transparent
+
+    &:after
+      content: ""
+      +size(20px, 2px)
+      background: $purple
+      position: absolute
+      bottom: 3px
+      left: 50%
+      +transform(translateX(-50%))

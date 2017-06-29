@@ -43,3 +43,8 @@ clients:
     desc: |
       We wish to establish an ideal environment for software development, and to design each and every software though the telling of stories, thus providing our users a rich and diverse experience.
     logo: 'fable-logo.svg'
+  - name: '愛飯團'
+    link: 'http://www.ifuntuan.com/'
+    desc: |
+      愛飯團是一個會員制網站，提供會員尊榮專屬的餐飲體驗與精品級美食購物服務。
+    logo: 'ifuntuan.png'
