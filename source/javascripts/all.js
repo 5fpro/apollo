@@ -28,13 +28,13 @@ $(function(){
   });
 
   // Closes the Responsive Menu on Menu Item Click
-  $('.navbar-collapse ul li a').click(function(){ 
+  $('.navbar-collapse ul li a').click(function(){
     $('.navbar-toggle:visible').click();
   });
 
   // Offset for Main Navigation
   var mainSection = $("#services").offset().top - 70;
-  
+
   $('#mainNav').affix({
     offset: { top: mainSection }
   })
@@ -52,7 +52,7 @@ $(function(){
   var hidden_project = $('.prehidden');
 
   hidden_project.hide();
-  
+
   $('#project-more').click(function(e){
     e.preventDefault();
     hidden_project.fadeToggle();
@@ -63,5 +63,15 @@ $(function(){
     else {
       this.innerHTML = "VIEW MORE"
     };
+  });
+
+  $('[js-scroll-to]').each(function() {
+    var bt = $(this)
+    bt.on('click', function() {
+      var target = $(bt.attr('js-scroll-to'))
+      $('html, body').animate({
+        scrollTop: target.offset().top - 80
+      }, 1000);
+    });
   });
 });

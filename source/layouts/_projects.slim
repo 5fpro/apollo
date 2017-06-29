@@ -18,7 +18,7 @@ section#projects
         .project-info
           p.project-desc =project.desc
 
-    .prehidden
+    .prehidden#hidden-projects
       - data.project.projects.drop(3).each do |project|
         .project
           .project-visual
@@ -36,5 +36,5 @@ section#projects
             p.project-desc =project.desc
 
     .project-more
-      a#project-more href="#"
+      a#project-more href="#" js-scroll-to="#hidden-projects"
         | VIEW MORE
