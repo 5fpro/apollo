@@ -48,3 +48,10 @@ projects:
     time: 'present'
     logo: 'sunshine-jrf-logo.svg'
     photo: ['sunshine-photo_1.jpg', 'sunshine-photo_2.jpg', 'sunshine-photo_3.jpg', 'sunshine-photo_4.jpg']
+  - clients: '愛飯團'
+    link: 'http://www.ifuntuan.com/'
+    desc: |
+      愛飯團是一個會員制網站，提供會員尊榮專屬的餐飲體驗與精品級美食購物服務。
+    time: 'present'
+    logo: 'ifuntuan.png'
+    photo: []
