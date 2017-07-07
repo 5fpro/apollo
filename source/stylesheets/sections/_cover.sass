@@ -1,37 +1,27 @@
 #cover
   position: relative
+  width: 100vw
   height: 100vh
+  min-height: 560px
   padding: 0
 
-  .hero-intro
-    background: -moz-linear-gradient(bottom, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
-    background: -webkit-linear-gradient(bottom, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
-    background: linear-gradient(to bottom, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80814590', endColorstr='#cc3a2b84',GradientType=0 )
-    background-blend-mode: multiply
-    +size(100%, 100vh)
+  .hero
+    @extend .cover-gradient
+    @extend .flexbox
+    align-items: center
     position: fixed
-    top: 0
-    padding: 30% 10%
-    
+    +size(100%, 100vh)
+
     @media (min-width: $screen-md)
-      background: -moz-linear-gradient(left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
-      background: -webkit-linear-gradient(left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
-      background: linear-gradient(to left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80814590', endColorstr='#cc3a2b84',GradientType=0 )
-      padding: 25vh 10%
+      justify-content: flex-start
+      padding-left: 10%
 
     .hero-title
-      font-family: 'Noto Sans TC', sans-serif
-      color: #fff
+      @extend .hero-font
       font-size: 28px
       font-weight: 500
       text-align: center
-      
-      position: relative
       padding: 40px 0
-      margin: 0
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3)
       
       &:after
         content: ""
@@ -43,46 +33,37 @@
         +transform(translateX(-50%))
 
       @media (min-width: $screen-sm)
-        font-size: 38px
+        font-size: 36px
       
       @media (min-width: $screen-md)
-        font-size: 48px
+        font-size: 42px
         text-align: left
 
         &:after
           left: 5px
           +transform(translateX(0%))
-          
 
     .hero-desc
-      font-family: 'Noto Sans TC', sans-serif
+      @extend .hero-font
       font-size: 14px
       font-weight: 300
-      letter-spacing: 1px
       line-height: 1.6
-      color: #fff
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3)
-
-      width: 85%
-      margin: 30px auto
+      max-width: 80%
+      padding: 30px 0 40px
 
       @media (min-width: $screen-sm)
         font-size: 16px
+        max-width: 330px
+
+    #explore
+      @extend .button-more
+      color: #fff
+      background: $viloet
+
+      &:hover
+        color: white
+        background: $purple
+        text-decoration: none
 
       @media (min-width: $screen-md)
-        width: 330px
-        margin: 40px 0
-
-  #explore
-    @extend .button-more
-    color: #fff
-    background: $viloet
-    margin-top: 80px
-
-    &:hover
-      color: white
-      background: $purple
-      text-decoration: none
-
-    @media (min-width: $screen-md)
-      margin: 0
+        margin: 0

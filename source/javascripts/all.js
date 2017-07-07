@@ -7,7 +7,11 @@
 $(function(){
 
   // Enable Hero Image
-  $.backstretch("../images/hero-image.jpg");
+  $.backstretch([
+    "../images/hero-image.jpg"
+    ], {
+      fade: 750,
+  });
 
   // Enable Bootstrap Carousel
   $('.carousel').carousel()
@@ -43,7 +47,7 @@ $(function(){
   $('#explore').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top
+      scrollTop: ($($anchor.attr('href')).offset().top - 69)
     }, 1000, 'easeInOutExpo');
     event.preventDefault();
   });
