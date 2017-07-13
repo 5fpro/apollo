@@ -2,12 +2,16 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap.min.js
 //= require jquery-backstretch/jquery.backstretch.min.js
 //= require jquery.easing/js/jquery.easing.min.js
+//= require fastclick/lib/fastclick.js
 //= require force_https
 
 $(function(){
 
+  // Enable FastClick
+	FastClick.attach(document.body);
+
   // Enable Hero Image
-  $.backstretch([
+  $("#cover").backstretch([
     "../images/hero-image.jpg"
     ], {
       fade: 750,
