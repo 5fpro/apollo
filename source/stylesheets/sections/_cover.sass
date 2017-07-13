@@ -1,16 +1,17 @@
 #cover
   position: relative
   width: 100vw
-  height: 100vh
-  min-height: 560px
+  height: 560px
   padding: 0
+
+  @media (min-width: $screen-sm)
+    height: 100vh
 
   .hero
     @extend .cover-gradient
     @extend .flexbox
     align-items: center
-    position: fixed
-    +size(100%, 100vh)
+    +size(100%, 100%)
 
     @media (min-width: $screen-md)
       justify-content: flex-start
