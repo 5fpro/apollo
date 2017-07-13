@@ -1,50 +1,45 @@
 #clients
   background-color: #fff
-  
-  @media (min-width: $screen-md)
-    padding: 100px 60px
+  padding-right: 0
+  padding-left: 0
 
   .clients-list
     @extend .flexbox
     margin: 0 auto
-    justify-content: flex-start
 
     @media (min-width: $screen-sm)
+      justify-content: flex-start
       max-width: 720px
 
     @media (min-width: $screen-md)
       max-width: 1200px
 
-    .client
+    .client-logo
+      display: block
+      +size(240px, 100px)
       +size(80%, auto)
-      margin: 0 auto
 
-      @media (min-width: $screen-sm)
-        width: calc(100%/3)
-        margin: 0
-
-      @media (min-width: $screen-md)
-        width: 20%
-
-      &.even
+      &:nth-child(odd)
         background-color: $marble
 
-      a
-        display: block
-        width: 240px
-        margin: 0 auto
-        filter: grayscale(1.0)
-        opacity: 0.8
-        +transition(all, 0.3s)
-
-        &:hover
+      &:hover
+        img
           filter: grayscale(0)
           opacity: 1
 
-        @media (min-width: $screen-sm)
-          width: 100%
+      @media (min-width: $screen-sm)
+        width: calc(100%/3)
 
-      .client-logo
+      @media (min-width: $screen-md)
+        width: 20%
+      
+      img
+        display: block
         +size(240px, 100px)
-        img
-          width: 100%
+        margin: 0 auto
+        opacity: 0.8
+        filter: grayscale(1.0)
+        +transition(opacity, 0.3s)
+
+        @media (min-width: $screen-sm)
+          +size(100%, auto)
