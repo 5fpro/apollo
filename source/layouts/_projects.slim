@@ -4,36 +4,30 @@ section#projects
   .projects-list
     - data.project.projects.take(3).each do |project|
       .project
-        .project-visual
-          = link_to project.link, target: '_blank' do
-            .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
-              .carousel-inner role="listbox"
-                - project.photo.each_with_index do |photo, index|
-                  .item class="#{index == 0 ? "active" : ""}"
-                    = image_tag 'project/' + photo, alt: project.client, title: project.client
-            .project-logo
-              = image_tag 'project/' + project.logo, alt: project.client, title: project.client
-        .project-time
-          p =project.time
+        = link_to project.link, target: '_blank', class:"project-visual" do
+          .project-photo
+            = image_tag 'project/' + project.photo, alt: project.client, title: project.client
+          .project-logo
+            = image_tag 'project/' + project.logo, alt: project.client, title: project.client
         .project-info
-          p.project-desc =project.desc
+          .project-desc
+            p =project.desc
+          .project-time
+            p =project.time
 
     .prehidden#hidden-projects
       - data.project.projects.drop(3).each do |project|
         .project
-          .project-visual
-            = link_to project.link, target: '_blank' do
-              .project-photo.carousel.slide.carousel-fade data-ride="carousel" data-interval="5000"
-                .carousel-inner role="listbox"
-                  - project.photo.each_with_index do |photo, index|
-                    .item class="#{index == 0 ? "active" : ""}"
-                      = image_tag 'project/' + photo, alt: project.client, title: project.client
-              .project-logo
-                = image_tag 'project/' + project.logo, alt: project.client, title: project.client
-          .project-time
-            p =project.time
+          = link_to project.link, target: '_blank', class:"project-visual" do
+            .project-photo
+              = image_tag 'project/' + project.photo, alt: project.client, title: project.client
+            .project-logo
+              = image_tag 'project/' + project.logo, alt: project.client, title: project.client
           .project-info
-            p.project-desc =project.desc
+            .project-desc
+              p =project.desc
+            .project-time
+              p =project.time
 
     .project-more
       a#project-more href="#" js-scroll-to="#hidden-projects"
