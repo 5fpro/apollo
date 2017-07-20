@@ -70,13 +70,13 @@ $(function(){
     };
   });
 
-  $('[js-scroll-to]').each(function() {
-    var bt = $(this)
-    bt.on('click', function() {
-      var target = $(bt.attr('js-scroll-to'))
-      $('html, body').animate({
-        scrollTop: target.offset().top - 80
-      }, 1000);
-    });
-  });
+  // $('[data-scroll-to]').each(function() {
+  //   var bt = $(this)
+  //   bt.on('click', function() {
+  //     var target = $(bt.data('scroll-to'))
+  //     $('html, body').animate({
+  //       scrollTop: target.offset().top - 80
+  //     }, 1000);
+  //   });
+  // });
 });
