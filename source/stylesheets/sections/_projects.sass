@@ -1,11 +1,14 @@
 #projects
   background: $marble
+  padding-right: 0
+  padding-left: 0
 
   .projects-list
     @extend .flexbox
 
     .project
       position: relative
+      width: 100%
       max-width: 960px
       margin: 0 auto 40px
 
@@ -13,133 +16,127 @@
         margin: 0 auto 80px
 
       .project-visual
-        +transition(all, 0.3s)
+        @extend .flexbox
+        +transition(opacity, 0.3s)
         opacity: 0.8
 
         &:hover
           opacity: 1
 
-      .project-photo
-        +size(100%, 280px)
-        overflow: hidden
-        display: inline-block
-        cursor: pointer
-        margin-top: 120px
+        .project-photo
+          order: 2
+          width: 100%
+          max-height: 280px
+          overflow: hidden
+          cursor: pointer
 
-        @media (min-width: $screen-sm)
-          +size(70%, 280px)
-          margin: 0
+          @media (min-width: $screen-sm)
+            order: 1
+            width: 70%
 
-        @media (min-width: $screen-md)
-          +size(680px, 280px)
+          @media (min-width: $screen-md)
+            width: 680px
 
-        img
-          +size(100%, auto)
+          img
+            +size(100%, auto)
 
-        &.carousel-fade
-          .carousel-inner
-            .item
-              opacity: 0
-              transition-property: opacity
-
-            .active
-              opacity: 1
-              &.left, &.right
-                left: 0
-                opacity: 0
-                z-index: 1
-
-      .project-logo
-        +size(100%, 100px)
-        position: absolute
-        top: 0
-        padding-left: 30px
-        overflow: hidden
-
-        @media (min-width: $screen-sm)
-          +size(30%, 160px)
-          display: inline-block
+        .project-logo
+          order: 1
           position: relative
-          vertical-align: top
+          +size(100%, 100px)
+          padding-left: 30px
 
-        @media (min-width: $screen-md)
-          +size(280px, 160px)
+          @media (min-width: $screen-sm)
+            order: 2
+            +size(30%, 160px)
 
-        img
-          max-width: 200px
-          position: absolute
-          top: 50%
-          +transform(translateY(-50%))
+          @media (min-width: $screen-md)
+            width: 280px
 
-      .project-time
-        +size(80%, auto)
-        position: relative
-        z-index: 999
-        margin: 0 0 5px 20%
-
-        p
-          width: 30%
-          color: #fff
-          font-size: 16px
-          text-transform: uppercase
-          line-height: 2.4
-          margin: 0
-          padding: 0 10px
-
-        &:before
-          content: ""
-          +size(65%, 1px)
-          background: #fff
-          position: absolute
-          bottom: 50%
-          right: 0
-
-        @media (min-width: $screen-sm)
-          +size(36%, auto)
-          margin: 0
-
-          p
-            color: $purple
-          &:before
-            background: $purple
-        
-        @media (min-width: $screen-md)
-          p
-            width: 20%
-            padding: 0
-          &:before
-            +size(75%, 1px)
+          img
+            position: absolute
+            top: 50%
+            max-width: 200px
+            +transform(translateY(-50%))
 
       .project-info
-        +size(85%, auto)
-        background-image: linear-gradient(to bottom, $viloet, $purple)
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
-        display: table
-        position: absolute
-        bottom: 0
-        right: 0
-        padding: 30px
-
-        p.project-desc
-          color: #fff
-          font-size: 15px
-          line-height: 1.6
-          letter-spacing: 1.2px
-          display: table-cell
-          vertical-align: middle
-          padding-bottom: 20px
-          +transform(translate3d(0, 0, 0))
+        position: relative
+        margin-top: -80px
+        overflow: auto
 
         @media (min-width: $screen-sm)
-          +size(62.5%, 160px)
-          padding: 40px
-          top: 160px
+          margin-top: -120px
 
-          p.project-desc
-            padding: 0
+        .project-desc
+          background-image: linear-gradient(to bottom, $viloet, $purple)
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+          +transform(translate3d(0, 0, 0))
+          display: table
+          float: right
+          width: 85%
+          padding: 30px
 
-    .prehidden
-      width: 100%
+          @media (min-width: $screen-sm)
+            width: 62.5%
+            min-height: 160px
+            padding: 40px
+
+          p
+            color: #fff
+            font-size: 15px
+            line-height: 1.6
+            letter-spacing: 1.2px
+            display: table-cell
+            vertical-align: middle
+            margin: 0
+            padding-bottom: 20px
+
+            @media (min-width: $screen-sm)
+              padding: 0
+
+        .project-time
+          position: absolute
+          width: 85%
+          height: 32px
+          bottom: 5px
+          right: 0
+          overflow: hidden
+
+          @media (min-width: $screen-sm)
+            +size(37.5%, 36px)
+            top: 125px
+            left: 0
+
+          p
+            width: 30%
+            color: #fff
+            font-size: 14px
+            line-height: 2.4
+            text-align: right
+            text-transform: uppercase
+            margin: 0
+
+            &:after
+              content: ""
+              +size(70%, 1px)
+              background: #fff
+              position: absolute
+              bottom: 50%
+              right: -15px
+
+            @media (min-width: $screen-sm)
+              color: $purple
+              font-size: 15px
+
+              &:after
+                width: 75%
+                background: $purple
+
+            @media (min-width: $screen-md)
+              width: 20%
+
+              &:after
+                width: 80%
 
     .project-more
       width: 100%
@@ -161,13 +158,3 @@
           color: white
           background: $purple
           text-decoration: none
-
-  /* For Carousel Fading Effects */
-  @media all and (transform-3d), (-webkit-transform-3d)
-    .carousel-fade .carousel-inner > .item
-      &.next, &.active.right, &.prev, &.active.left
-        opacity: 0
-        +transform(translate3d(0, 0, 0))
-      &.next.left, &.prev.right, &.active
-        opacity: 1
-        +transform(translate3d(0, 0, 0))

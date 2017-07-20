@@ -2,21 +2,26 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap.min.js
 //= require jquery-backstretch/jquery.backstretch.min.js
 //= require jquery.easing/js/jquery.easing.min.js
+//= require fastclick/lib/fastclick.js
 //= require force_https
 
 $(function(){
 
-  // Enable Hero Image
-  $.backstretch("../images/hero-image.jpg");
+  // Enable FastClick
+	FastClick.attach(document.body);
 
-  // Enable Bootstrap Carousel
-  $('.carousel').carousel()
+  // Enable Hero Image
+  $("#cover").backstretch([
+    "../images/hero-image.jpg"
+    ], {
+      fade: 750,
+  });
 
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $('a.page-scroll').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: ($($anchor.attr('href')).offset().top - 69)
+      scrollTop: ($($anchor.attr('href')).offset().top - 68)
     }, 1000, 'easeInOutExpo');
     event.preventDefault();
   });
@@ -43,7 +48,7 @@ $(function(){
   $('#explore').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top
+      scrollTop: ($($anchor.attr('href')).offset().top - 68)
     }, 1000, 'easeInOutExpo');
     event.preventDefault();
   });
