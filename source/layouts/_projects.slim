@@ -1,0 +1,34 @@
+section#projects
+  h3.section-title Projects
+
+  .projects-list
+    - data.project.projects.take(3).each do |project|
+      .project
+        = link_to project.link, target: '_blank', class:"project-visual" do
+          .project-photo
+            = image_tag 'project/' + project.photo, alt: project.client, title: project.client
+          .project-logo
+            = image_tag 'project/' + project.logo, alt: project.client, title: project.client
+        .project-info
+          .project-desc
+            p =project.desc
+          .project-time
+            p =project.time
+
+    .prehidden#hidden-projects
+      - data.project.projects.drop(3).each do |project|
+        .project
+          = link_to project.link, target: '_blank', class:"project-visual" do
+            .project-photo
+              = image_tag 'project/' + project.photo, alt: project.client, title: project.client
+            .project-logo
+              = image_tag 'project/' + project.logo, alt: project.client, title: project.client
+          .project-info
+            .project-desc
+              p =project.desc
+            .project-time
+              p =project.time
+
+    .project-more
+      a#project-more href="#" data-scroll-to="#hidden-projects"
+        | VIEW MORE

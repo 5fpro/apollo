@@ -1,0 +1,57 @@
+projects:
+  - clients: 'STUDIO DOE'
+    link: 'https://studiodoe.com'
+    desc: |
+      主要為服飾線上銷售網站，包含使用者登入、購物車、各種付款方式、訂單管理以及優惠金，後台則包含：與銀行介接資料、電子發票、提供物流出貨單、客服系統等，完整電子商務功能。
+    time: 'present'
+    logo: 'studiodoe-logo.svg'
+    photo: 'studiodoe-photo.jpg'
+  - clients: 'THE WALL MUSIC'
+    link: 'https://thewall.tw'
+    desc: |
+      讓提供表演空間的客戶，從場地租借排程、簽約、節目內容上稿、售票、訂單管理、到會計出帳都能完全整合在單一系統內完成。
+    time: 'present'
+    logo: 'thewallmusic-logo.svg'
+    photo: 'thewallmusic-photo.jpg'
+  - clients: '蔡英文 2016 競選官網'
+    link: 'http://iing.tw'
+    desc: |
+      純內容管理系統。總共製作一個主網站與三個子網站，並針對瞬間流量暴增以及網路攻擊等情況客製化整體系統架構。同時提供中、英、日、西四種語言的內容管理。
+    time: '2016'
+    logo: 'iing-logo.svg'
+    photo: 'iing-photo.jpg'
+  - clients: '#nude'
+    link: 'https://nude.tw'
+    desc: |
+      為 STUDIO DOE 的前身所獨立出來的純內容官網，提供多元化內容上稿，以及 SEO。
+    time: 'present'
+    logo: 'nude-logo.svg'
+    photo: 'nude-photo.jpg'
+  - clients: '國會無雙'
+    link: 'https://musou.tw'
+    desc: |
+      純內容上稿系統，提供多元帳號機制，讓不同身分的使用者例如編輯、立委（代理人）、系統管理者能自主貢獻內容，並有審核機制。
+    time: 'present'
+    logo: 'musou-logo.svg'
+    photo: 'musou-photo.jpg'
+  - clients: '時刻旅行 Tripmoment'
+    link: 'https://tripmoment.com/'
+    desc: |
+      內容管理系統，包含內容作者的投稿管理，以及多國語系的架構規劃。前台並提供使用者登入，讓使用者能對內容進行互動。另有建置全文檢索系統。
+    time: 'present'
+    logo: 'tripmoment-logo.svg'
+    photo: 'tripmoment-photo.jpg'
+  - clients: '司法陽光網'
+    link: 'https://sunshine.jrf.org.tw/'
+    desc: |
+      提供律師、案件當事人、法院旁聽者三種角色可針對法官進行評鑑，並且利用司法院開放資料，包含法官、庭期、判決書，驗證評鑑資料的真實性。而系統開發過程中所分析的庭期、判決書結果，亦開放出來給需要的開發者使用。
+    time: 'present'
+    logo: 'sunshine-jrf-logo.svg'
+    photo: 'sunshine-photo.jpg'
+  # - clients: '愛飯團'
+  #   link: 'http://www.ifuntuan.com/'
+  #   desc: |
+  #     愛飯團是一個會員制網站，提供會員尊榮專屬的餐飲體驗與精品級美食購物服務。
+  #   time: 'present'
+  #   logo: 'ifuntuan.png'
+  #   photo: 

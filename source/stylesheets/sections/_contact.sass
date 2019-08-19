@@ -1,0 +1,92 @@
+#contact
+  position: relative
+  background: $viloet
+  background: -moz-linear-gradient(top, $viloet 0%, $purple 100%)
+  background: -webkit-linear-gradient(top, $viloet 0%,$purple 100%)
+  background: linear-gradient(to bottom, $viloet 0%,$purple 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$viloet', endColorstr='$purple',GradientType=0 )
+  padding: 0 5%
+  height: 270px
+
+  @media (min-width: $screen-sm)
+    height: 400px
+
+  @media (min-width: $screen-md)
+    height: 200px
+
+  .contact-card
+    position: relative
+    background: #fff
+    box-shadow: 0 2px 8px 0 rgba($dark-grey,0.50)
+    max-width: 1200px
+    min-height: 240px
+    border-radius: 4px
+    +transform(translateY(-120px))
+    padding: 60px 0 80px
+    margin: 0 auto
+
+    @media (min-width: $screen-sm)
+      padding: 80px 0 120px
+
+    .section-title
+      margin-bottom: 60px
+
+      @media (min-width: $screen-sm)
+        margin-bottom: 80px
+
+      @media (min-width: $screen-md)
+        width: 125px
+        position: absolute
+        top: 48%
+        left: 10%
+        +transform(translateY(-50%))
+
+    .contact-email
+      font-family: 'Montserrat', sans-serif
+      font-size: 32px
+      font-weight: 700
+      color: $blue-grey
+      display: block
+      text-align: center
+      +transition(color, 0.3s)
+
+      &:after
+        content: ""
+        +size(240px, 2px)
+        background-color: $purple
+        +transform(translateX(-50%) translateY(-50%))
+        position: absolute
+        top: 240px
+        left: 50%
+
+      @media (min-width: $screen-sm)
+        font-size: 64px
+
+        &:after
+          +size(450px, 2px)
+          top: 330px
+
+      @media (min-width: $screen-md)
+        position: absolute
+        top: 48%
+        left: 50%
+        +transform(translateX(-50%) translateY(-50%))
+
+        &:after
+          top: 100px
+
+      &:hover
+        color: $purple
+
+  .copyright
+    font-size: 14px
+    color: #fff
+    text-align: center
+    +transform(translateX(-50%))
+    width: 100%
+    position: absolute
+    left: 48%
+    bottom: 20px
+
+    @media (min-width: $screen-sm)
+      font-size: 16px

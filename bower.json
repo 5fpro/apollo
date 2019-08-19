@@ -1,0 +1,26 @@
+{
+  "name": "apollo",
+  "homepage": "https://github.com/5fpro/apollo",
+  "authors": [
+    "marsz <marsz330@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap-sass": "^3.3.7",
+    "components-font-awesome": "^4.7.0",
+    "jquery-backstretch": "^2.1.15",
+    "jquery.easing": "^1.3.1",
+    "fastclick": "^1.0.6"
+  }
+}

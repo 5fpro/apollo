@@ -1,0 +1,95 @@
+/* Color palette */
+$viloet: #814590
+$purple: #3a2b84
+$dark-grey: #323232
+$blue-grey: #455A64
+$silver: #cfd8dc
+$marble: #edf2f6
+
+body
+  font-family: 'Questrial', 'Noto Sans TC', sans-serif
+
+a:hover, a:visited, a:link, a:active
+  text-decoration: none
+
+section
+  position: relative
+  padding: 80px 10%
+
+  @media (min-width: $screen-md)
+    padding: 100px 10%
+
+.main
+  overflow: hidden
+
+/* Flexbox for Equal Height*/
+.flexbox
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
+
+.cover-gradient
+  /* 5FPRO Cover Gradient*/
+  background: -moz-linear-gradient(bottom, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
+  background: -webkit-linear-gradient(bottom, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
+  background: linear-gradient(to bottom, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80814590', endColorstr='#cc3a2b84',GradientType=0 )
+  background-blend-mode: multiply
+
+  @media (min-width: $screen-md)
+    background: -moz-linear-gradient(left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
+    background: -webkit-linear-gradient(left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
+    background: linear-gradient(to left, rgba(#fff,0) 0%,rgba($viloet,0.5) 50%, rgba($purple,1) 100%)
+
+/* Text styles */
+.hero-font
+  font-family: 'Noto Sans TC', sans-serif
+  color: #fff
+  letter-spacing: 1px
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3)
+  position: relative
+  padding: 0
+  margin: 0 auto
+
+.section-title
+  font-size: 20px
+  text-transform: uppercase
+  letter-spacing: 2px
+  text-align: center
+  color: $blue-grey
+
+  width: 100%
+  position: relative
+  padding-bottom: 40px
+  margin: 0 0 100px
+
+  &:after
+    content: ""
+    +size(17px, 20px)
+    background: url(../images/5fpro-icon.svg) no-repeat left top
+    position: absolute
+    bottom: 0
+    left: 50%
+
+    +transform(translateX(-50%) translateY(100%))
+
+  @media (min-width: $screen-sm)
+    font-size: 24px
+
+.button-more
+  font-size: 16px
+  text-align: center
+  line-height: 50px
+  color: $purple
+
+  display: block
+  +size(160px, 50px)
+  border-radius: 4px
+  padding: 0 30px
+  margin: 0 auto
+  
+  +transition(all, 0.3s)

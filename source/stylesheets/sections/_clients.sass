@@ -1,0 +1,45 @@
+#clients
+  background-color: #fff
+  padding-right: 0
+  padding-left: 0
+
+  .clients-list
+    @extend .flexbox
+    margin: 0 auto
+
+    @media (min-width: $screen-sm)
+      justify-content: flex-start
+      max-width: 720px
+
+    @media (min-width: $screen-md)
+      max-width: 1200px
+
+    .client-logo
+      display: block
+      +size(240px, 100px)
+      +size(80%, auto)
+
+      &:nth-child(odd)
+        background-color: $marble
+
+      &:hover
+        img
+          filter: grayscale(0)
+          opacity: 1
+
+      @media (min-width: $screen-sm)
+        width: calc(100%/3)
+
+      @media (min-width: $screen-md)
+        width: 20%
+      
+      img
+        display: block
+        +size(240px, 100px)
+        margin: 0 auto
+        opacity: 0.8
+        filter: grayscale(1.0)
+        +transition(opacity, 0.3s)
+
+        @media (min-width: $screen-sm)
+          +size(100%, auto)

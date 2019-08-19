@@ -1,0 +1,7 @@
+section#clients
+  h3.section-title Clients
+
+  .clients-list
+    - data.client.clients.each_with_index do |client, index|
+      = link_to client.link, target: '_blank', class:"client-logo" do
+        = image_tag 'client/' + client.logo, alt: client.desc, title: client.name

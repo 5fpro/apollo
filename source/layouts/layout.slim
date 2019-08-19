@@ -1,7 +1,7 @@
 doctype 5
 html
-  head
-    = partial 'layouts/head'
-  body class="#{page_classes}"
+  = partial 'layouts/head'
+  body class="#{page_classes}" id="home"
+    = partial 'base/fb_app'
     = yield
     = partial 'layouts/foot'

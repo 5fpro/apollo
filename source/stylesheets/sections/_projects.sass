@@ -1,0 +1,161 @@
+#projects
+  background: $marble
+  padding-right: 0
+  padding-left: 0
+
+  .projects-list
+    @extend .flexbox
+    flex-direction: column
+
+    .project
+      position: relative
+      width: 100%
+      max-width: 960px
+      margin: 0 auto 40px
+
+      @media (min-width: $screen-sm)
+        margin: 0 auto 80px
+
+      .project-visual
+        @extend .flexbox
+        +transition(opacity, 0.3s)
+        opacity: 0.8
+
+        &:hover
+          opacity: 1
+
+        .project-photo
+          order: 2
+          width: 100%
+          max-height: 280px
+          overflow: hidden
+          cursor: pointer
+
+          @media (min-width: $screen-sm)
+            order: 1
+            width: 70%
+
+          @media (min-width: $screen-md)
+            width: 680px
+
+          img
+            +size(100%, auto)
+
+        .project-logo
+          order: 1
+          position: relative
+          +size(100%, 100px)
+          padding-left: 30px
+
+          @media (min-width: $screen-sm)
+            order: 2
+            +size(30%, 160px)
+
+          @media (min-width: $screen-md)
+            width: 280px
+
+          img
+            position: absolute
+            top: 50%
+            max-width: 200px
+            +transform(translateY(-50%))
+
+      .project-info
+        position: relative
+        margin-top: -80px
+        overflow: auto
+
+        @media (min-width: $screen-sm)
+          margin-top: -120px
+
+        .project-desc
+          background-image: linear-gradient(to bottom, $viloet, $purple)
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+          +transform(translate3d(0, 0, 0))
+          display: table
+          float: right
+          width: 85%
+          padding: 30px
+
+          @media (min-width: $screen-sm)
+            width: 62.5%
+            min-height: 160px
+            padding: 40px
+
+          p
+            color: #fff
+            font-size: 15px
+            line-height: 1.6
+            letter-spacing: 1.2px
+            display: table-cell
+            vertical-align: middle
+            margin: 0
+            padding-bottom: 20px
+
+            @media (min-width: $screen-sm)
+              padding: 0
+
+        .project-time
+          position: absolute
+          width: 85%
+          height: 32px
+          bottom: 5px
+          right: 0
+          overflow: hidden
+
+          @media (min-width: $screen-sm)
+            +size(37.5%, 36px)
+            top: 125px
+            left: 0
+
+          p
+            width: 30%
+            color: #fff
+            font-size: 14px
+            line-height: 2.4
+            text-align: right
+            text-transform: uppercase
+            margin: 0
+
+            &:after
+              content: ""
+              +size(70%, 1px)
+              background: #fff
+              position: absolute
+              bottom: 50%
+              right: -15px
+
+            @media (min-width: $screen-sm)
+              color: $purple
+              font-size: 15px
+
+              &:after
+                width: 75%
+                background: $purple
+
+            @media (min-width: $screen-md)
+              width: 20%
+
+              &:after
+                width: 80%
+
+    .project-more
+      width: 100%
+      padding-top: 80px
+
+      a
+        @extend .button-more
+        border: solid 1px $purple
+
+        &:before
+          content: ""
+          +size(1px, 80px)
+          background: $purple
+          position: absolute
+          left: 50%
+          +transform(translateX(-50%) translateY(-100%))
+
+        &:hover
+          color: white
+          background: $purple
+          text-decoration: none
