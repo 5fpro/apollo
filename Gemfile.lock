@@ -89,7 +89,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.11.2)
     public_suffix (2.0.5)
-    rack (2.0.2)
+    rack (2.0.7)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.9.8)
@@ -123,4 +123,4 @@ DEPENDENCIES
   slim
 
 BUNDLED WITH
-   1.15.1
+   1.17.3
