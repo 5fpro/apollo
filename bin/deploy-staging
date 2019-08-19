@@ -9,4 +9,4 @@ git commit -m "$(git rev-parse --abbrev-ref HEAD) @ $(date +"%Y/%m/%d") $(date +
 git push origin gh-pages
 cd ..
 sleep 5
-open http://staging.5fpro.com
+open https://staging.5fpro.com
